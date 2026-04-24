@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apps – GitHub Pages</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #58a6ff;
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #8b949e;
+      max-width: 480px;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #388bfd26;
+      color: #58a6ff;
+      border: 1px solid #388bfd66;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.4rem;
+      background: #238636;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover { background: #2ea043; }
+
+    #output {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #3fb950;
+      min-height: 1.4em;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="badge">GitHub Pages</span>
+    <h1>Hello, World!</h1>
+    <p>This is a self-contained HTML file served via GitHub Pages. No external dependencies – everything is inline.</p>
+    <button onclick="greet()">Click me</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function greet() {
+      const messages = [
+        "🚀 It's working!",
+        "✅ GitHub Pages is live!",
+        "🎉 Self-contained and deployed!",
+        "⭐ No build step needed!",
+      ];
+      const el = document.getElementById("output");
+      el.textContent = messages[Math.floor(Math.random() * messages.length)];
+    }
+  </script>
+</body>
+</html>
